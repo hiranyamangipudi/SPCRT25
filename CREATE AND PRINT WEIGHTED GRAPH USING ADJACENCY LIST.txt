@@ -1,0 +1,154 @@
+//CREATE AND PRINT WEIGHTED GRAPH USING ADJACENCY LIST
+
+def addNode(v):
+    if v in graph:
+        print(v,"is already available")
+    else:
+        graph[v]=[]
+def show():
+    for x in graph:
+        print(x,":",graph[x])
+def addEdge(node1,node2,weight):
+    if node1 not in graph:
+        print(node1,"is not present in graph")
+    elif node2 not in graph:
+        print(node2,"is not present in graph")
+    else:
+        graph[node1].append((node2,weight))
+        graph[node2].append((node1,weight))
+graph={}
+while True:
+    print()
+    print("1.Add Node\n2.Add Edge\n3.printlist\n4.exit")
+    ch=int(input("enter your choice"))
+    if ch==1:
+        v=input("enter node")
+        addNode(v)
+    elif ch==2:
+        node1=input("enter node1")
+        node2=input("enter node2")
+        weight=int(input("enter the weight"))
+        addEdge(node1,node2,weight)
+    elif ch==3:
+        show()
+    elif ch==4:
+        break
+    else:
+        print("Invalid choice")
+//OUTPUT//
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice1
+enter nodea
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice1
+enter nodeb
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice1
+enter nodec
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice1
+enter noded
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice1
+enter nodee
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice1
+enter nodef
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice2
+enter node1a
+enter node2e
+enter the weight2
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice2
+enter node1b
+enter node2d
+enter the weight3
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice2
+enter node1a
+enter node2d
+enter the weight34
+
+1.Add Node
+2.Add Edge
+3.printlist
+4.exit
+enter your choice3
+a : [('e', 2), ('d', 34)]
+b : [('d', 3)]
+c : []
+d : [('b', 3), ('a', 34)]
+e : [('a', 2)]
+f : []
+
+1.Add Node
+2.Add Edge
+3.printl;ist
+4.exit
+enter your choice2
+enter node1c
+enter node2a
+enter the weight4
+
+1.Add Node
+2.Add Edge
+3.printl;ist
+4.exit
+enter your choice2
+enter node1c
+enter node2e
+enter the weight6
+
+1.Add Node
+2.Add Edge
+3.printl;ist
+4.exit
+enter your choice3
+a : [('e', 2), ('d', 34), ('c', 4)]
+b : [('d', 3)]
+c : [('a', 4), ('e', 6)]
+d : [('b', 3), ('a', 34)]
+e : [('a', 2), ('c', 6)]
+f : []
+
+1.Add Node
+2.Add Edge
+3.printl;ist
+4.exit
+enter your choice4
