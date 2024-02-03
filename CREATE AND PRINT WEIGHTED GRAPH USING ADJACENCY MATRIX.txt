@@ -1,0 +1,132 @@
+//CREATE AND PRINT WEIGHTED GRAPH USING ADJACENCY MATRIX
+def addNode(v):
+    global nodecount
+    if v in nodes:
+        print(v,"is already available in graph")
+    else:
+        nodes.append(v)
+        nodecount=nodecount+1
+        for x in graph:
+            x.append(0)
+        temp=[]
+        for i in range(nodecount):
+            temp.append(0)
+        graph.append(temp)
+def addEdge(node1,node2,weight):
+    if node1 not in nodes:
+        print("node1 is not available")
+    elif node2 not in nodes:
+        print("node2 is not available")
+    else:
+        i=nodes.index(node1)
+        j=nodes.index(node2)
+        graph[i][j]=weight
+        graph[j][i]=weight
+def show():
+    for i in range(nodecount):
+        for j in range(nodecount):
+            print(graph[i][j],end="")
+        print()
+nodes=[]
+graph=[]
+nodecount=0
+while True:
+    print()
+    print("1.Add nodee\n2.Add edge\n3show\n4.exit")
+    ch=int(input("enter your choice"))
+    if ch==1:
+        x=input("enter node")
+        addNode(x)
+    elif ch==2:
+        node1=input("enter first node")
+        node2=input("enter second node")
+        weight=int(input("enter the weight"))
+        addEdge(node1,node2,weight)
+    elif ch==3:
+        show()
+    elif ch==4:
+        break
+    else:
+        print("invalid choice")
+//OUTPUT//
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice1
+enter nodea
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice1
+enter nodeb
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice1
+enter nodec
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice1
+enter noded
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice2
+enter first nodea
+enter second nodeb
+enter the weight3
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice2
+enter first nodea
+enter second noded
+enter the weight5
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice2
+enter first nodec
+enter second noded
+enter the weight7
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice2
+enter first nodea
+enter second nodec
+enter the weight9
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice3
+0395
+3000
+9007
+5070
+
+1.Add nodee
+2.Add edge
+3show
+4.exit
+enter your choice4
+        
+        
